@@ -1,0 +1,546 @@
+/* Global Styles */
+body {
+    font-family: 'Sen', sans-serif;
+    color: #3c493f;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.fa-brands{
+    margin-top: 15px;
+}
+
+a {
+    color: #98C1D9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+/* Landing Page Slideshow */
+@keyframes slideshow {
+    0% {
+        background-image: url("../public/img/cnc/cnc2.webp");
+    }
+    25% {
+        background-image: url("../public/img/cnc/cnc.webp"); /* Add your second image here */
+    }
+    50% {
+        background-image: url("../public/img/cnc/cnc3.jfif"); /* Add your third image here */
+    }
+    75% {
+        background-image: url("../public/img/cnc/cnc4.jfif"); /* Add your fourth image here */
+    }
+    100% {
+        background-image: url("../public/img/cnc/cnc4.jfif"); /* Loop back to the first image */
+    }
+}
+
+section.landing-page {
+    background: url("../public/img/cnc/cnc4.jfif") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    padding: 60px 20px;
+    z-index: 1;
+    opacity: 70%;
+    animation: slideshow 20s infinite; /* Animation for slideshow */
+}
+
+
+section {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+/* Layout Consistency: Flexbox and Grid */
+
+
+.testimonial_grid,
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-page .item1 {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 100px;
+}
+
+.landing-page .item2{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.landing-page button{
+    outline: 0;
+    border: none;
+}
+
+
+
+.testimonial_grid {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items if necessary */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;  /* Ensure all items stretch to the same height */
+    margin-top: 40px;
+}
+
+.testimonial_grid .titem {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);  /* Adjust width to ensure two columns */
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;           /* Ensure the card items are flexible */
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: space-between; /* Ensure content is spread evenly */
+}
+
+.testimonial_grid .titem:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+.about-us-item1 {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    align-items: stretch; /* Ensures items stretch to the same height */
+    width: 100%;
+}
+
+.about-us-item {
+    width: 300px; /* Set fixed width for items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-item:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.about-us-item .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #98C1D9;
+}
+
+.about-us-item img {
+    width: 100%; /* Ensure the image fits within the card */
+    height: auto;
+}
+
+.about-us-item1 h5{
+    color: #293241;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Ensure the title and paragraph text are responsive */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.pro-item2 #root .App {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: stretch;    /* Ensures all items stretch to the same height */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.pro-item button{
+    margin-bottom: 20px;
+}
+
+.pro-item2 .card {
+    background-color: #E0FBFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px; /* Set width for all cards */
+    height: 100%;  /* Ensure all cards stretch to the same height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+.pro-item2 .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Image inside the card */
+.pro-item2 .card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images inside the card */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.item1 h1{
+    font-weight: bolder;
+    color: #E0FBFC; 
+}
+
+.item1 h2{
+    font-weight: bolder;
+    color: #E0FBFC; 
+}
+
+.item1 p{
+    font-weight: bolder;
+    color: #E0FBFC; 
+}
+
+.pro-item2 #root .App .card{
+    background-color: #E0FBFC;
+}
+
+.pro-item2 .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.footer-item button{
+    margin-top: 10px;
+}
+
+
+.contact-us {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: #293241;
+    padding: 40px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contact-us .citem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #98C1D9;
+}
+.contact-us .citem a{
+    color: #E0FBFC ;
+}
+
+
+
+
+
+.footer {
+    background-color: #f4f7f6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-item a {
+    margin-bottom: 10px;
+    color: #243066;
+    font-size: 1rem;
+}
+
+.footer-item a:hover {
+    color: #8BBEB2 ;
+    text-decoration: underline;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    background-color: #EE6C4D;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+.footer-item button {
+    background-color: #EE6C4D;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.footer-item input {
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    max-width: 250px;
+}
+
+.footer-item input:focus {
+    border-color: #8BBEB2 ; 
+    box-shadow: 0 0 5px #8BBEB2; 
+}
+
+/* Testimonials */
+.testimonial_grid .titem {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); 
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial_grid .titem:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.profile-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial_grid .text-center {
+    margin-bottom: 15px;
+}
+
+.testimonial_grid p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Floating WhatsApp Button */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #0088cc;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    animation: bounce 2s infinite;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.fade-down {
+    animation: fade-down 0.5s forwards;
+    opacity: 1;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    color: #999;
+    background-color: #243066;
+    z-index: 60000;
+    padding: 10px 20px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    box-shadow: 1px 1px 25px #0088cc;
+    transform: scale(1.1);
+}
+
+.back-to-top span {
+    font-size: 24px;
+    line-height: 1;
+}
+.footer-copy{
+    display: flex;
+    flex-direction: column;
+}
+/* Mobile View */
+@media (max-width: 600px) {
+
+    .products{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-item1{
+        gap: 20px;
+    }
+
+    .about-us{
+        margin-bottom: 0;
+    }
+
+    .pro-item2 #root .App {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    
+
+    .about-us-item1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-item {
+        width: 80%; /* Adjust width for mobile */
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-item {
+        width: 100%;
+        
+        margin-bottom: 30px;
+    }
+
+    .contact-us {
+        gap: 6px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-page {
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .testimonial_grid .titem {
+        width: 100%; /* Stack testimonials vertically on small screens */
+    }
+
+    .footer-copy {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
